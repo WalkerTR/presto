@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.facebook.presto</groupId>
+        <artifactId>presto-root</artifactId>
+        <version>0.217-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>presto-ranger-plugin</artifactId>
+    <name>presto-ranger-plugin</name>
+
+    <properties>
+        <air.check.skip-enforcer>true</air.check.skip-enforcer>
+        <air.check.skip-checkstyle>true</air.check.skip-checkstyle>
+        <air.main.basedir>${project.parent.basedir}</air.main.basedir>
+        <ranger.version>1.2.0</ranger.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.ranger</groupId>
+            <artifactId>ranger-plugins-common</artifactId>
+            <version>${ranger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
