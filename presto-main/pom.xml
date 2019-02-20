@@ -53,6 +53,12 @@
 
         <dependency>
             <groupId>com.facebook.presto</groupId>
+            <artifactId>presto-ranger-plugin</artifactId>
+            <version>0.217-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.facebook.presto</groupId>
             <artifactId>presto-client</artifactId>
         </dependency>
 
