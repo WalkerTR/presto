@@ -15,6 +15,7 @@ package com.facebook.presto.ranger;
 
 import org.apache.ranger.plugin.policyengine.RangerAccessResourceImpl;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class RangerPrestoAccessResource
@@ -23,6 +24,13 @@ public class RangerPrestoAccessResource
     private static final String KEY_CATALOG = "catalog";
     private static final String KEY_DATABASE = "database";
     private static final String KEY_TABLE = "table";
+
+    public static RangerPrestoAccessResource getCatalog(String catalogName)
+    {
+        Map<String, Object> elements = new HashMap<>();
+        elements.put(KEY_CATALOG, catalogName);
+        return new RangerPrestoAccessResource(elements);
+    }
 
     public RangerPrestoAccessResource(Map<String, Object> elements)
     {
