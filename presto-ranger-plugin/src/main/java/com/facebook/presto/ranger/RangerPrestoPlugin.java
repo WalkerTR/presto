@@ -15,10 +15,13 @@ package com.facebook.presto.ranger;
 
 import org.apache.ranger.plugin.service.RangerBasePlugin;
 
-public class RangerPrestoPlugin extends RangerBasePlugin {
-    private static String RANGER_SERVICE = "presto";
+public class RangerPrestoPlugin
+        extends RangerBasePlugin
+{
+    private static final String RANGER_SERVICE = "presto";
 
-    public RangerPrestoPlugin(String appId) {
+    public RangerPrestoPlugin(String appId)
+    {
         super(RANGER_SERVICE, appId);
     }
 }

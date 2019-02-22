@@ -17,11 +17,12 @@ import org.apache.ranger.plugin.policyengine.RangerAccessResult;
 
 import java.util.HashSet;
 
-public class Test {
-    public static void main(String[] args) {
+public class Test
+{
+    private static void main(String[] args)
+    {
         RangerPrestoPlugin rangerPlugin = new RangerPrestoPlugin("myservice");
         rangerPlugin.init();
-
 
         RangerPrestoAccessResource accessResource =
                 new RangerPrestoAccessResource("mycatalogue", "mydatabase", "mytable");

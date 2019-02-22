@@ -12,8 +12,6 @@
     <name>presto-ranger-plugin</name>
 
     <properties>
-        <air.check.skip-enforcer>true</air.check.skip-enforcer>
-        <air.check.skip-checkstyle>true</air.check.skip-checkstyle>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>
         <ranger.version>1.2.0</ranger.version>
     </properties>
@@ -49,13 +47,19 @@
                     <groupId>com.sun.jersey</groupId>
                     <artifactId>jersey-bundle</artifactId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>httpmime</artifactId>
+                    <groupId>org.apache.httpcomponents</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javax.persistence</artifactId>
+                    <groupId>org.eclipse.persistence</groupId>
+                </exclusion>
             </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
         </dependency>
 
     </dependencies>
